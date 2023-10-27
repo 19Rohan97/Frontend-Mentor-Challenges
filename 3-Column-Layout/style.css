@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --big-shoulder: "Big Shoulders Display", sans-serif;
+  --lexend-deca: "Lexend Deca", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--big-shoulder);
+}
+p,
+a,
+ul {
+  font-family: var(--lexend-deca);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100%;
+}
+#three-column-card {
+  width: 100%;
+  max-width: 930px;
+  /* height: 500px; */
+  margin: 0 auto;
+  padding: 5.5rem 1.5rem;
+}
+
+#three-column-card .card {
+  width: 100%;
+  max-width: 327px;
+  min-height: 442px;
+  margin: 0 auto;
+  /* border-top-left-radius: 8px;
+  border-top-right-radius: 8px; */
+  padding: 3rem;
+}
+
+#three-column-card .card h4 {
+  color: #f2f2f2;
+  font-size: 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  margin: 2.19rem 0 1.56rem;
+}
+
+#three-column-card .card p {
+  width: 100%;
+  max-width: 231px;
+  opacity: 0.75;
+  color: white;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  word-wrap: break-word;
+}
+
+#three-column-card .card a {
+  width: 146px;
+  height: 48px;
+  background: #f2f2f2;
+  border-radius: 25px;
+  border: 2px solid #fff;
+  padding: 0.69rem 0 0.75rem;
+  display: inline-block;
+  text-align: center;
+  color: #e28625;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  word-wrap: break-word;
+  text-decoration: none;
+  margin-top: 2.25rem;
+  transition: 0.4s all ease-in-out;
+}
+
+#three-column-card .card.card-1 {
+  background: #e28625;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+#three-column-card .card.card-2 {
+  background: #006971;
+}
+#three-column-card .card.card-3 {
+  background: #004140;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+#three-column-card .card.card-1 a {
+  color: #e28625;
+}
+#three-column-card .card.card-2 a {
+  color: #006971;
+}
+#three-column-card .card.card-3 a {
+  color: #004140;
+}
+
+#three-column-card .card a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+@media only screen and (min-width: 992px) {
+  #three-column-card {
+    display: flex;
+  }
+  #three-column-card .card.card-1 {
+    border-top-right-radius: 0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+  #three-column-card .card.card-3 {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 0;
+  }
+}
