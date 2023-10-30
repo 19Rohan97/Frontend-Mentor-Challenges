@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+
+    <link rel="stylesheet" href="assets/css/output.css" />
+  </head>
+  <body>
+    <div id="results-summary">
+      <div id="left">
+        <h4>Your Result</h4>
+        <div class="result-counter">
+          <div class="counter" data-target="76"></div>
+          <span>of 100</span>
+          <!-- Counter Code in JS -->
+        </div>
+
+        <div class="result">
+          <h3>Great</h3>
+          <p>
+            Your performance exceed 65% of the people conducting the test here!
+          </p>
+        </div>
+      </div>
+      <div id="right">
+        <h4>Summary</h4>
+
+        <div id="data-list"></div>
+        <a href="#" class="continue-btn">Continue</a>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

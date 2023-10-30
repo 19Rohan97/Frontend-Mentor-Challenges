@@ -1,0 +1,366 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+:root {
+  --red: #f64a4a;
+  --orange: #fb7c58;
+  --yellow: #f8cd65;
+  --green: #a4ffaf;
+  --almost-white: #e6e5ea;
+  --grey: #817d92;
+  --dark-grey: #24232c;
+  --very-dark-grey: #18171f;
+  --body-bg: #08070b;
+}
+
+@font-face {
+  font-family: "jetbrains_monoitalic";
+  src: url(https://rohantgeorge.github.io/assets/fonts/static/JetBrainsMono-Bold.ttf);
+}
+
+/**
+* Global Styles
+*/
+body {
+  font-family: "jetbrains_monoitalic", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  background-color: var(--body-bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.heading-m {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 42.24px;
+  color: var(--grey);
+  text-align: center;
+  margin-bottom: 31px;
+}
+
+.heading-l {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.68px;
+}
+
+.text-white {
+  color: var(--almost-white);
+}
+
+::placeholder {
+  opacity: 0.25;
+}
+
+.d-grid {
+  display: grid;
+}
+
+/**
+*
+* Custom Styles
+*
+*/
+
+form {
+  width: 100%;
+  max-width: 540px;
+  margin: auto;
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 32px;
+}
+
+.form-group.d-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+label {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--almost-white);
+}
+
+input[type="text"] {
+  padding: 19px 0 19px 32px;
+  width: 100%;
+  color: var(--almost-white);
+  background-color: var(--dark-grey);
+  border: 0;
+  font-size: 32px;
+  font-weight: 700;
+  outline: none;
+}
+
+.copy {
+  position: absolute;
+  top: 50%;
+  right: 28px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.copied {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--green);
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  right: 60px;
+  transform: translateY(-50%);
+}
+
+.copy:hover path {
+  fill: var(--almost-white);
+}
+
+/* Range slider */
+#rangeValue {
+  font-size: 32px;
+  line-height: 42px;
+  text-align: right;
+  color: var(--green);
+}
+
+.range {
+  width: 100%;
+  height: 8px;
+  grid-column: span 2;
+  -webkit-appearance: none;
+  background: var(--very-dark-grey);
+  outline: none;
+  border-radius: 15px;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--almost-white);
+  border: 2px solid var(--almost-white);
+  cursor: pointer;
+}
+
+.range::-webkit-slider-thumb:hover {
+  background: var(--very-dark-grey);
+  border: 2px solid var(--green);
+  cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox {
+  display: grid;
+  row-gap: 19px;
+  margin-top: 46px;
+}
+
+.checkbox div {
+  position: relative;
+}
+
+.checkbox label {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  cursor: pointer;
+}
+
+.checkbox input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.checkbox label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--almost-white);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.checkbox input:hover + label::before {
+  border: 2px solid var(--green);
+}
+
+.checkbox input:checked + label::before {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+.checkbox input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 9px;
+  width: 6px;
+  height: 14px;
+  border: solid var(--very-dark-grey);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.error {
+  color: var(--red);
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+
+/* Strength */
+.strength {
+  background-color: var(--very-dark-grey);
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  padding: 0 32px;
+}
+
+.strength h4 {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--grey);
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+
+.strength-range {
+  display: flex;
+  gap: 9px;
+}
+
+.strength-range h5 {
+  font-size: 24px;
+  line-height: 32px;
+  color: var(--almost-white);
+  text-transform: uppercase;
+  text-align: right;
+  margin-right: 6px;
+}
+
+.strength-range span {
+  border: 2px solid var(--almost-white);
+  width: 10px;
+  height: 28px;
+}
+
+.strength-range.too-weak span:nth-child(1) {
+  background-color: var(--red);
+  border: 2px solid var(--red);
+}
+
+.strength-range.weak span:nth-child(1),
+.strength-range.weak span:nth-child(2) {
+  background-color: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.strength-range.medium span:nth-child(1),
+.strength-range.medium span:nth-child(2),
+.strength-range.medium span:nth-child(3) {
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+}
+
+.strength-range.strong span:nth-child(1),
+.strength-range.strong span:nth-child(2),
+.strength-range.strong span:nth-child(3),
+.strength-range.strong span:nth-child(4) {
+  background-color: var(--green);
+  border: 2px solid var(--green);
+}
+
+/* Generate btn */
+.generate {
+  height: 65px;
+  background-color: var(--green);
+  border: 2px solid var(--green);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--dark-grey);
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+.generate:hover {
+  background-color: transparent;
+  color: var(--green);
+}
+
+.generate:hover svg path {
+  fill: var(--green);
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0 16px;
+  }
+
+  .heading-m {
+    font-size: 24px;
+  }
+
+  .p-custom {
+    padding: 24px 16px !important;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    font-size: 24px;
+    padding-left: 16px;
+  }
+
+  .copy {
+    right: 16px;
+  }
+
+  #rangeValue {
+    font-size: 24px;
+  }
+
+  .form-group.d-grid {
+    column-gap: 0;
+  }
+}
