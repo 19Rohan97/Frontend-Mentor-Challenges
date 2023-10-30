@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Primary-blue: #2c7dfa;
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+  --Outfit: "Outfit", sans-serif;
+}
+
+body {
+  font-size: 15px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--Light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: var(--Outfit);
+}
+
+.qr-card {
+  width: 100%;
+  max-width: 320px;
+  background-color: var(--White);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0px 25px 25px rgba(0, 0, 0, 0.0476518);
+}
+
+.qr-card .qr-card-img {
+  background-color: var(--Primary-blue);
+  padding: 64px;
+  border-radius: 10px;
+  margin-bottom: 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.qr-card .qr-card-img::before {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  top: -10rem;
+  left: -8rem;
+  width: 328px;
+  height: 328px;
+  background: #3685ff;
+}
+
+.qr-card .qr-card-img::after {
+  content: "";
+  border-radius: 50%;
+  position: absolute;
+  bottom: -9rem;
+  right: -9rem;
+  width: 270px;
+  height: 270px;
+  background: #3685ff;
+}
+
+.qr-card .qr-card-img img {
+  position: relative;
+  width: 100%;
+  z-index: 9;
+}
+
+.qr-card h3 {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27.22px;
+  text-align: center;
+  color: var(--Dark-blue);
+  margin: 0 16px;
+  margin-bottom: 16px;
+}
+
+.qr-card p {
+  font-weight: 400;
+  color: var(--Grayish-blue);
+  line-height: 18.9px;
+  letter-spacing: 0.19px;
+  text-align: center;
+  margin: 0 16px;
+  margin-bottom: 24px;
+}
+
+/* Mobile Media Queries */
+@media only screen and (max-width: 600px) {
+  .qr-card {
+    width: 90%;
+  }
+  .qr-card .qr-card-img {
+    background-color: #3685ff;
+  }
+
+  .qr-card .qr-card-img::before,
+  .qr-card .qr-card-img::after {
+    background: var(--Primary-blue);
+  }
+}
