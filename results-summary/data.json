@@ -2,21 +2,21 @@
   {
     "category": "Reaction",
     "score": 84,
-    "icon": "./assets/images/icon-reaction.svg"
+    "icon": "https://19rohan97.github.io/Frontend-Mentor-Challenges/results-summary/assets/images/icon-reaction.svg"
   },
   {
     "category": "Memory",
     "score": 92,
-    "icon": "./assets/images/icon-memory.svg"
+    "icon": "https://19rohan97.github.io/Frontend-Mentor-Challenges/results-summary/assets/images/icon-memory.svg"
   },
   {
     "category": "Verbal",
     "score": 64,
-    "icon": "./assets/images/icon-verbal.svg"
+    "icon": "https://19rohan97.github.io/Frontend-Mentor-Challenges/results-summary/assets/images/icon-verbal.svg"
   },
   {
     "category": "Visual",
     "score": 76,
-    "icon": "./assets/images/icon-visual.svg"
+    "icon": "https://19rohan97.github.io/Frontend-Mentor-Challenges/results-summary/assets/images/icon-visual.svg"
   }
 ]
